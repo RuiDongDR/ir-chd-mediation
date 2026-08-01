@@ -391,7 +391,6 @@ tidyfull <- function(d, idcol, nmin, carried = NULL) {
   d[, significant_p05  := prop_mediated_pvalue < 0.05]
   d[, passed_n_filter  := n_complete > nmin]
   if (!is.null(carried)) d[, carried_to_serial := tolower(Mediator) %in% carried]
-  d[, Direction := fifelse(prop_mediated > 0, "Risk-increasing", "Protective")]
   setorder(d, prop_mediated_pvalue, -prop_mediated)
   d[]
 }
