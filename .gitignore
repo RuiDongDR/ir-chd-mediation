@@ -1,0 +1,11 @@
+# analysis outputs / intermediates (not part of the code release)
+work/
+results/
+
+# OS / editor / language cruft
+.DS_Store
+__pycache__/
+*.pyc
+.Rhistory
+.RData
+.Rproj.user/
