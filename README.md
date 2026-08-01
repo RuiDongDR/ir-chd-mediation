@@ -67,10 +67,23 @@ paths are placeholders you set once in `config.R` (R steps) and `config.sh`
 
 - Set seeds are preserved from the original analysis for reproducibility.
 
+## Authors
+
+Rui Dong¹\*, Jiao Fu²\*, Bowen Zhang³, Qingling Zhang⁴, Yang Yan³, Guoliang Li⁵
+
+\* Rui Dong and Jiao Fu contributed equally.
+Corresponding authors: Guoliang Li and Yang Yan.
+
+1. Hetao Institute of Mathematics and Interdisciplinary Sciences, Shenzhen, China
+2. Department of Endocrinology and Metabolism, the First Affiliated Hospital of Xi'an Jiaotong University, Xi'an, China
+3. Department of Cardiovascular Surgery, the First Affiliated Hospital of Xi'an Jiaotong University, Xi'an, China
+4. Tianjin Key Laboratory of Ionic-Molecular Function of Cardiovascular Disease, Department of Cardiology, Tianjin Institute of Cardiology, Second Hospital of Tianjin Medical University, Tianjin, China
+5. Department of Cardiovascular Medicine, the First Affiliated Hospital of Xi'an Jiaotong University, Xi'an, China
+
 ## License
 
 Released under the **Creative Commons Attribution-NonCommercial 4.0 International
 License (CC BY-NC 4.0)** — see [`LICENSE`](LICENSE). You may share and adapt this
 material for **non-commercial** purposes with appropriate attribution.
 
-© 2026 The Authors.
+© 2026 Rui Dong, Jiao Fu, Bowen Zhang, Qingling Zhang, Yang Yan, Guoliang Li.
