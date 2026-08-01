@@ -1,5 +1,11 @@
 # Analysis code — genetic insulin resistance → CHD via proteomic–metabolomic mediation
 
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+![R](https://img.shields.io/badge/R-%E2%89%A54.4-276DC3?logo=r&logoColor=white)
+![Shell](https://img.shields.io/badge/shell-bash-4EAA25?logo=gnubash&logoColor=white)
+![Data](https://img.shields.io/badge/data-UK%20Biobank-1f6feb)
+![Methods](https://img.shields.io/badge/methods-GWAS%20%C2%B7%20PRS%20%C2%B7%20serial%20mediation-8250df)
+
 Release code for the study *"Dissecting the Genetic Link Between Insulin Resistance
 and Coronary Heart Disease: A Multi-Trait GWAS and Proteomic–Metabolomic Mediation
 Analysis."* The scripts reproduce the analysis end-to-end given access to the
