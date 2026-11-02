@@ -386,12 +386,13 @@ serial_prot <- unique(fread(cfg$serial_mediation_results, select = "protein")$pr
 
 tidyfull <- function(d, idcol, nmin, carried = NULL) {
   d <- copy(d)
+  if ("error" %in% names(d)) d[, error := NULL]
   setnames(d, idcol, "Mediator")
   d[, Mediator         := toupper(Mediator)]
   d[, significant_p05  := prop_mediated_pvalue < 0.05]
   d[, passed_n_filter  := n_complete > nmin]
   if (!is.null(carried)) d[, carried_to_serial := tolower(Mediator) %in% carried]
-  setorder(d, prop_mediated_pvalue, -prop_mediated)
+  setorder(d, Mediator)
   d[]
 }
 s3 <- tidyfull(prot,  "protein",    30000, carried = serial_prot)
@@ -459,7 +460,7 @@ cat("Table 3:", nrow(table3), "core proteins\n")
 ## Supplementary Table S5 — all level-1 serial-mediation pathways
 ## =====================================================================
 s5 <- fread(cfg$level1_pathways)
-s5_out <- s5[order(-abs(prop_serial_est)), .(
+s5_out <- s5[order(protein, metabolite), .(
   Protein           = toupper(protein),
   Metabolite        = metabolite,
   Metabolite_class  = metabolite_class,
@@ -514,7 +515,7 @@ cat("Figure 5: heatmap of", nrow(hm), "protein x HDL-metabolite cells (", unique
 ## =====================================================================
 ## Supplementary Table S6 — core-protein x HDL-subclass serial-mediation pathways
 ## =====================================================================
-s6 <- hdl[order(-abs(prop_serial_est)), .(
+s6 <- hdl[order(protein, metabolite), .(
   Protein         = toupper(protein),
   Metabolite      = metabolite,
   HDL_subclass    = metabolite_class,
